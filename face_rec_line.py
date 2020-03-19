@@ -11,7 +11,7 @@ def lineNotify(message):
 def _lineNotify(payload,file=None):
     import requests
     url = 'https://notify-api.line.me/api/notify'
-    token = 'gQXQ4AazTBSe79lXhTa9ZmYukN4X04riTa3OIZHUJGs'
+    token = 'gQXQ4AazTBSe79lXhTa9ZmYukN4X04riTa3OIZHUJGs' #This is my Token, So if you want to use this please CHANGE the token!
     headers = {'Authorization':'Bearer '+token}
     return requests.post(url, headers=headers , data = payload, files=file)
 
@@ -37,7 +37,7 @@ model.train(images, labels)
 
 #Use LBPHFace recognizer on camera frame
 face_cascade = cv2.CascadeClassifier(haar_file)
-webcam = cv2.VideoCapture(0)
+webcam = cv2.VideoCapture(0) #The () behide the Video capture is the numbe of camera you can change it if you want to use another camera, default is 0.
 
 while True:
     (_, im) = webcam.read()
@@ -52,13 +52,14 @@ while True:
 
         if prediction[1]<100:
             cv2.putText(im,'%s - %.0f' % (names[prediction[0]],prediction[1]),(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-            lineNotify("%s ได้เข้าสู่หอพักแล้ว" %(names[prediction[0]]))
+            lineNotify("%s is came into the Dorm!" %(names[prediction[0]]))
     	
         else:
             cv2.putText(im,'Unknown',(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-            lineNotify("Warning: บุคคลภาคนอกได้เข้าสู่หอพัก!")
+            lineNotify("Warning: Unknown Person is came into the Dorm!")
 
-    cv2.imshow('Safety in Drom System', im)
+    cv2.imshow('Safety in Drom System', im) #Show the title of program
+    #Waiting for "ESC" key for stop the Program
     key = cv2.waitKey(10)
     if key == 27:
         break
