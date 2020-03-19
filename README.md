@@ -13,7 +13,7 @@ When you Clone or download this code these necessary step you must do.
   - Delete my Dataset in "datasets" Directory.
   - Run "create_dataset.py" After that, you will see the New directory named "New Person".
   - Rename "New Person" to your name.
-  - Run face_rec_offine.py to check, if everything no wrong it will make a popup in new window named "Safety in Dorm System".
+  - Run "face_rec_offine.py" to check, if everything no wrong it will make a popup in new window named "Safety in Dorm System".
  
  If you want to send the message to Line via Line Notify FOLLOW these step.
   - Open "face_rec_line.py" with IDLE.
