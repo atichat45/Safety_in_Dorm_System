@@ -1,0 +1,6 @@
+README.md
+setup.py
+safety_indorm.egg-info/PKG-INFO
+safety_indorm.egg-info/SOURCES.txt
+safety_indorm.egg-info/dependency_links.txt
+safety_indorm.egg-info/top_level.txt
