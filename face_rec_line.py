@@ -11,7 +11,7 @@ def lineNotify(message):
 def _lineNotify(payload,file=None):
     import requests
     url = 'https://notify-api.line.me/api/notify'
-    token = 'gQXQ4AazTBSe79lXhTa9ZmYukN4X04riTa3OIZHUJGs' #This is my Token, So if you want to use this please CHANGE the token!
+    token = 'YOUR TOKEN' #This is my Token, So if you want to use this please CHANGE the token!
     headers = {'Authorization':'Bearer '+token}
     return requests.post(url, headers=headers , data = payload, files=file)
 
